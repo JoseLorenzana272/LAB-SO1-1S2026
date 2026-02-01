@@ -9,3 +9,7 @@ cua.proto
 
 venv
 __pycache__
+
+.env
+.env.local
+.env.example

@@ -18,7 +18,7 @@ RUN go mod download
 # NOTA: la palabra entre -o y el punto es el nombre del ejecutable, en este caso es "server"
 RUN CGO_ENABLED=0 GOOS=linux go build -o server .
 
-# Puerto expuesto (debe ser el mismo que el del servidor)
+# Puerto expuesto (debe ser el mismo que el del codigo de la API)
 EXPOSE 3000
 
 # Comando de ejecución
