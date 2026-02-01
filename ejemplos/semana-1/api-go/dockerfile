@@ -1,0 +1,25 @@
+# Usamos la version de Go Alpine como base
+FROM golang:1.25-alpine
+
+# Configuración del entorno
+# Con workdir creamos una carpeta dentro del contenedor
+WORKDIR /app
+
+# Con COPY . . copiamos el contenido del directorio actual al contenedor
+COPY . .
+
+# Instalar dependencias
+# Con RUN go mod download descargamos las dependencias del proyecto
+RUN go mod download
+
+# Compilar
+# Con la siguiente linea compilamos el proyecto a un ejecutable para Linux ya que
+# la version Alpine es un linux ligero
+# NOTA: la palabra entre -o y el punto es el nombre del ejecutable, en este caso es "server"
+RUN CGO_ENABLED=0 GOOS=linux go build -o server .
+
+# Puerto expuesto (debe ser el mismo que el del servidor)
+EXPOSE 3000
+
+# Comando de ejecución
+CMD ["/app/server"]
