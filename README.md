@@ -28,6 +28,7 @@ Implementaciones prácticas organizadas cronológicamente por semana de clase.
 
 - **Semana 1** (`/ejemplos/semana-1`): Ejemplo introductorio de API en Go.
 - **Semana 2** (`/ejemplos/semana-2`): Implementación de API PING-PONG usando Fiber y estructura de ejemplo para el Proyecto 1.
+- **Semana 3** (`/ejemplos/semana-3`): Guía detallada de comandos de navegación, manipulación de archivos y gestión de procesos en Linux.
 
 ### Recursos Recomendados
 - [Documentación oficial de Go](https://golang.org/doc/)

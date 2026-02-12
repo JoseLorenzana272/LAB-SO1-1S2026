@@ -15,7 +15,7 @@ __pycache__
 .env.example
 
 ejemplos/otros
-ejemplos/semana-3
+# ejemplos/semana-3
 ejemplos/semana-4
 ejemplos/semana-5
 ejemplos/semana-6
