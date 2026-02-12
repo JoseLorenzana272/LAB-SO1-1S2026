@@ -1419,12 +1419,6 @@ find . -type f -exec md5sum {} \; | sort | uniq -d -w32
 
 ## Recursos Adicionales
 
-### Documentación
-
-- **Man pages**: `man [comando]`
-- **Help integrada**: `[comando] --help`
-- **Info pages**: `info [comando]`
-
 ### Sitios web útiles
 
 - https://explainshell.com - Explica comandos de shell
