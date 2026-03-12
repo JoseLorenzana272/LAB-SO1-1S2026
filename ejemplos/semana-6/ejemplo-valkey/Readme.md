@@ -185,4 +185,35 @@ HGETALL container:*
 O en modo Command:
 ```
 HGETALL container:nginx:*
+
+
 ```
+
+---
+
+## Qué se guarda en Valkey ahora:
+
+| Key | Tipo | Contenido |
+|---|---|---|
+| `system:total_ram_gb` | STRING | `6.4` fijo |
+| `system:ram_used_mb` | STRING | suma RAM activa |
+| `system:ram_free_mb` | STRING | RAM libre calculada |
+| `container:nginx` | STREAM | historial CPU/RAM |
+| `snapshot:nginx` | HASH | último valor de nginx |
+| `top:ram` | ZSET | ranking por memoria |
+| `top:cpu` | ZSET | ranking por CPU |
+
+---
+
+## En Grafana:
+
+| Panel | Command | Key |
+|---|---|---|
+| Total RAM | GET | `system:total_ram_gb` |
+| Free RAM | GET | `system:ram_free_mb` |
+| RAM usada | GET | `system:ram_used_mb` |
+| Gráfica RAM en tiempo | XRANGE | `container:nginx` |
+| Top 5 RAM | ZRANGE | `top:ram` |
+| Top 5 CPU | ZRANGE | `top:cpu` |
+
+Para el **Top 5** en Grafana usa `ZRANGE` con `REV` activado y `Count: 5` para obtener los 5 mayores.
