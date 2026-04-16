@@ -19,7 +19,7 @@ type server struct {
 func (s *server) SendReport(ctx context.Context, req *pb.WarReportRequest) (*pb.WarReportResponse, error) {
 	log.Printf("Servidor recibió reporte: País=%s, Aviones=%d, Barcos=%d", req.Country, req.WarplanesInAir, req.WarshipsInWater)
 
-	return &pb.WarReportResponse{Status: "1"}, nil
+	return &pb.WarReportResponse{Status: "TODO SALIO BIEN"}, nil
 }
 
 func main() {
