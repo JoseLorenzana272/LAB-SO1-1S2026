@@ -51,6 +51,21 @@ docker build -t food-producer ./producer
 docker build -t food-consumer ./consumer
 ```
 
+1.1 Crear el clúster manualmente por consola (GKE)
+
+Para este ejemplo se utilizará un clúster estándar de **3 nodos** en GCP.  
+(Referencia: el máximo permitido por proyecto es 8 nodos).
+
+Al crear el clúster, los nodos quedan conectados automáticamente dentro de la misma red del clúster.
+
+```bash
+gcloud container clusters create ejemplosemana11 --num-nodes=3 --region=us-west1-a --tags=allin,allout --machine-type=e2-medium --no-enable-network-policy --disk-size=25GB --disk-type pd-standard
+```
+Al finalizar ejecuta:
+```bash
+kubectl get all
+```
+
 2. Aplicar recursos:
 ```bash
 kubectl apply -k k8s/

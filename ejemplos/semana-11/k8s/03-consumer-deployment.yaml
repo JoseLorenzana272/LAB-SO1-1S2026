@@ -17,8 +17,8 @@ spec:
                   image: roldyoran/food-consumer:latest
                   imagePullPolicy: IfNotPresent
                   envFrom:
-                      - secretRef:
-                            name: app-secret
+                      - configMapRef:
+                            name: app-configmap
                   resources:
                       requests:
                           memory: "64Mi"
