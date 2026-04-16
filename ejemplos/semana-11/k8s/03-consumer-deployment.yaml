@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: consumer-deployment
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            app: consumer
+    template:
+        metadata:
+            labels:
+                app: consumer
+        spec:
+            containers:
+                - name: consumer
+                  image: roldyoran/food-consumer:latest
+                  imagePullPolicy: IfNotPresent
+                  envFrom:
+                      - secretRef:
+                            name: app-secret
+                  resources:
+                      requests:
+                          memory: "64Mi"
+                          cpu: "50m"
+                      limits:
+                          memory: "128Mi"
+                          cpu: "200m"
+                  restartPolicy: Always

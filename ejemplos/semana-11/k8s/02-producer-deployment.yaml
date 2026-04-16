@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: producer-deployment
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            app: producer
+    template:
+        metadata:
+            labels:
+                app: producer
+        spec:
+            containers:
+                - name: producer
+                  image: roldyoran/food-producer:latest
+                  imagePullPolicy: IfNotPresent
+                  envFrom:
+                      - secretRef:
+                            name: app-secret
+                  resources:
+                      requests:
+                          memory: "64Mi"
+                          cpu: "50m"
+                      limits:
+                          memory: "128Mi"
+                          cpu: "200m"
+                  restartPolicy: Always
