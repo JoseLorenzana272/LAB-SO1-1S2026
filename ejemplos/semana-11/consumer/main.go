@@ -69,6 +69,8 @@ func main() {
 		fmt.Printf("  Categoria: %s\n", platillo.Categoria)
 		fmt.Printf("================================\n\n")
 
+		// Despues ustedes pueden guardar en valkey
+
 		d.Ack(false)
 	}
 }

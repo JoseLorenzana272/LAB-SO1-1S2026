@@ -15,7 +15,7 @@ spec:
             containers:
                 - name: producer
                   image: roldyoran/food-producer:latest
-                  imagePullPolicy: IfNotPresent
+                  imagePullPolicy: Always
                   envFrom:
                       - configMapRef:
                             name: app-configmap

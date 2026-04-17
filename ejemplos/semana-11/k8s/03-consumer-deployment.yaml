@@ -15,7 +15,7 @@ spec:
             containers:
                 - name: consumer
                   image: roldyoran/food-consumer:latest
-                  imagePullPolicy: IfNotPresent
+                  imagePullPolicy: Always
                   envFrom:
                       - configMapRef:
                             name: app-configmap
