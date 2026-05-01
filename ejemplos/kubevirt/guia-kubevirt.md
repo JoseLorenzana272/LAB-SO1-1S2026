@@ -156,6 +156,8 @@ mkdir -p /mnt/data/grafana-data /mnt/data/grafana-logs /mnt/data/grafana-plugins
   cfg:default.paths.data=/mnt/data/grafana-data \
   cfg:default.paths.logs=/mnt/data/grafana-logs \
   cfg:default.paths.plugins=/mnt/data/grafana-plugins &
+  
+/mnt/data/grafana-v11.5.0/bin/grafana-server --homepath /mnt/data/grafana-v11.5.0 cfg:default.paths.data=/mnt/data/grafana-data cfg:default.paths.logs=/mnt/data/grafana-logs cfg:default.paths.plugins=/mnt/data/grafana-plugins &
 
 # 7. Verificar que corre en el puerto 3000
 netstat -tlnp | grep 3000
@@ -227,4 +229,3 @@ Credenciales por defecto: **admin / admin**
 | Componente | Puerto interno | Puerto externo |
 |------------|---------------|----------------|
 | Grafana VM | 3000          | 32000 (NodePort) |
-
