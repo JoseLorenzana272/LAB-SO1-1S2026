@@ -31,7 +31,10 @@
 
 | Acción          | Comando                              | Salida Esperada                                                                 |
 |----------------|--------------------------------------|---------------------------------------------------------------------------------|
-| Verificar HPA  | kubectl get hpa                      | El HPA de la API Rust con targets de CPU > 30%.                                 |
+| Verificar HPA  | kubectl get hpa                      | El HPA de la API Rust con targets de CPU > 30%. |
+
+| Listar Todo      | kubectl get all                   | Listar Todo
+|
 | Logs de Ingesta| kubectl logs deployment/api-rust     | Logs mostrando la recepción de JSON desde Locust.                               |
 | Logs gRPC      | kubectl logs deployment/go-grpc-server | Logs indicando que se recibió un mensaje vía gRPC desde el cliente Go.        |
 
@@ -43,7 +46,6 @@
 
 | Acción            | Comando                           | Salida Esperada                                                                 |
 |------------------|-----------------------------------|---------------------------------------------------------------------------------|
-| Listar Todo      | kubectl get all                   | Listar Todo
 | Listar VMs       | kubectl get vms                   | Al menos dos VirtualMachines: valkey-vm y grafana-vm.                           |
 | Verificar Estado | kubectl get vmi                   | El estado debe ser Running.                                                     |
 | Revisar Recursos | kubectl describe vmi <nombre-vm>  | Debería mostrar la imagen de disco (CloudInit o ContainerDisk).                 |
