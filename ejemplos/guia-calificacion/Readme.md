@@ -28,16 +28,12 @@
 ## 3. Lógica de Aplicación (Rust & Go)
 
 ### Criterios 1.2 y 1.3: API Rust y Servicios Go.
-
-| Acción          | Comando                              | Salida Esperada                                                                 |
-|----------------|--------------------------------------|---------------------------------------------------------------------------------|
-| Verificar HPA  | kubectl get hpa                      | El HPA de la API Rust con targets de CPU > 30%. |
-
-| Listar Todo      | kubectl get all                   | Listar Todo
-|
-| Logs de Ingesta| kubectl logs deployment/api-rust     | Logs mostrando la recepción de JSON desde Locust.                               |
-| Logs gRPC      | kubectl logs deployment/go-grpc-server | Logs indicando que se recibió un mensaje vía gRPC desde el cliente Go.        |
-
+| Acción            | Comando                                   | Salida Esperada                                                                 |
+|-------------------|-------------------------------------------|---------------------------------------------------------------------------------|
+| Verificar HPA     | kubectl get hpa                           | El HPA de la API Rust con targets de CPU > 30%.                                 |
+| Listar Todo       | kubectl get all                           | Listar Todo                                                                     |
+| Logs de Ingesta   | kubectl logs deployment/api-rust          | Logs mostrando la recepción de JSON desde Locust.                               |
+| Logs gRPC         | kubectl logs deployment/go-grpc-server    | Logs indicando que se recibió un mensaje vía gRPC desde el cliente Go.          |
 ---
 
 ## 4. Verificación de KubeVirt (Valkey & Grafana)
