@@ -43,6 +43,7 @@
 
 | Acción            | Comando                           | Salida Esperada                                                                 |
 |------------------|-----------------------------------|---------------------------------------------------------------------------------|
+| Listar Todo      | kubectl get all                   | Listar Todo
 | Listar VMs       | kubectl get vms                   | Al menos dos VirtualMachines: valkey-vm y grafana-vm.                           |
 | Verificar Estado | kubectl get vmi                   | El estado debe ser Running.                                                     |
 | Revisar Recursos | kubectl describe vmi <nombre-vm>  | Debería mostrar la imagen de disco (CloudInit o ContainerDisk).                 |
