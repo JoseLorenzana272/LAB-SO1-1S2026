@@ -24,6 +24,7 @@
 |------------------|-----------------------------|---------------------------------------------------------------------------------|
 | Verificar Gateway| kubectl get gateway         | Un recurso de tipo Gateway con una IP externa asignada.                         |
 | Verificar Rutas  | kubectl get httproute       | Rutas configuradas para /grpc-#carnet y opcionalmente /dapr-#carnet.            |
+| Verificar Rutas de carnet  | kubectl describe httproute       | Rutas configuradas para /grpc-#carnet            |
 
 ---
 
