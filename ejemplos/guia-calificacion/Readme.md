@@ -1,5 +1,7 @@
 # Guía de Calificación: Proyecto M.U.M.N.K8s (SO1)
 
+## **ADAPTAR los comandos a su cluster si tiene un namespace usar el "-n <name>" al final, al igual que el nombre de sus deploys o pods para obtener los logs**
+
 ---
 
 ## 1. Infraestructura Base y Zot (Fuera del Clúster)
