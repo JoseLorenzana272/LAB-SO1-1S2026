@@ -1,6 +1,6 @@
 # Guía de Calificación: Proyecto M.U.M.N.K8s (SO1)
 
-## **ADAPTAR los comandos a su cluster si tiene un namespace usar el "-n <name>" al final, al igual que el nombre de sus deploys o pods para obtener los logs**
+## ***IMPORTANTE: ADAPTAR los comandos a su cluster si tiene un namespace usar el "-n name" al final, al igual que el nombre de sus deploys o pods para obtener adaptar el comando 'kubectl logs nombre-del-deploy'***
 
 ---
 
