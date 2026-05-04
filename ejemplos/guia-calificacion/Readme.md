@@ -88,7 +88,13 @@ De preferencia, que la base de datos no tenga datos para que el dashboard esté 
 
 ---
 
-## 8. Mensajería Alternativa (Dapr - Punteo Extra)
+## 8. Demostracion de Conocimientos Practicos
+
+Se le dara una instruccion a realizar en vivo durante la calificacion, tendra que realizar lo solicitado por el auxiliar, no tendra acceso a su documentacion o herramientas externas, tendra 3 minutos para realizar lo solicitado
+
+---
+
+## 9. Mensajería Alternativa (Dapr - Punteo Extra)
 
 Esta sección valida la implementación del flujo adicional de mensajería utilizando el SDK de Dapr y su integración con RabbitMQ.
 
